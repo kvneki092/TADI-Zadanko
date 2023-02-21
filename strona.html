@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            body{
+                text-align: center;
+                line-height: 2em;
+                background-color: blueviolet;
+                color: white;
+                
+            }
+
+            #ok:hover{
+                background-color: blueviolet;
+                color: white;
+                border: 1px solid white;
+                box-shadow: 0px 0px 5px white;;
+            }
+
+            h1{
+                text-shadow: 0px 0px 3px white;
+            }
+
+            form{
+                text-shadow: 0px 0px 2px white;;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Strona Aleksander Ratajski</h1>
+            <form>
+                Imie<br><input type="text" id="name"/><br>
+                Nazwisko<br><input type="text" id="lname"/><Br>
+                <input type="button" id="ok" value="Ok"/> 
+
+            </form>
+            <p id="wynik"></p>
+        </div>
+        <script>
+            document.getElementById("ok").addEventListener("click",function(){
+                var name = document.getElementById("name").value;
+                var lname = document.getElementById("lname").value;
+
+                document.getElementById("wynik").innerHTML = "Witaj "+name+" "+lname+"! :3";
+            })
+        </script>
+    </body>
+</html>
